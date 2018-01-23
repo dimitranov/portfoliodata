@@ -1,6 +1,6 @@
 {
   "details": {
-    "title": "Combustion",
+    "title": "Combustion v2",
     "text": " Lorem Ipsum is simplgdsggsdgsthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specime",
     "time": "  12 Dec 2017 - 25 Dec 2017 - 30h",
     "learned": " User Authentication , Material - UI , Slider - Swiper, ChartsJS",
@@ -15,7 +15,7 @@
     ],
     "responsive": {
       "isPhone": true,
-      "isTablet": true,
+      "isTablet": true
     }
   },
   "case_study": [{
