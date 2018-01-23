@@ -1,7 +1,8 @@
 {
   "details": {
+    "url_link": "https://movieblob.github.io/",
     "title": "Movie Blob",
-    "text": " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specime",
+    "text": "Find movies and tv shows, Serch by year, name, genre and more. Explore the top rated and upcoming. Save movies and tv shows you like I a personal list so you don't forget them. ",
     "time": "  02 Jan 2018 - 12 Jan 2018 - 50h",
     "learned": " HTTP requests / Axios , Redux Basic App Structure , Functional Components",
     "practiced": " Firebase Authentication, User Base Data, CSS3 - Animations, jQuery UX , Redux Composition, React Functional Components, HTTP requests",

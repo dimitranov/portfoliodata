@@ -1,13 +1,14 @@
 {
   "details": {
+    "url_link": "https://combustionspark.github.io",
     "title": "Combustion v2",
-    "text": " Lorem Ipsum is simplgdsggsdgsthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specime",
+    "text": "A web application for managing your car variables. Calculate your fuel consumption, price for trip and distance you can pass. Collect personal data for better expense management.",
     "time": "  12 Dec 2017 - 25 Dec 2017 - 30h",
     "learned": " User Authentication , Material - UI , Slider - Swiper, ChartsJS",
     "practiced": " needs info",
     "techs": [
-      "material",
       "react_logo",
+      "material",
       "firebase_logo",
       "es6",
       "charts_js",
