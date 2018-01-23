@@ -1,0 +1,40 @@
+{
+  "details": {
+    "title": "Combustion",
+    "text": " Lorem Ipsum is simplgdsggsdgsthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specime",
+    "time": "  12 Dec 2017 - 25 Dec 2017 - 30h",
+    "learned": " User Authentication , Material - UI , Slider - Swiper, ChartsJS",
+    "practiced": " needs info",
+    "techs": [
+      "react_logo",
+      "firebase_logo",
+      "es6",
+      "charts_js",
+      "css3",
+      "html5"
+    ],
+    "responsive": {
+      "isPhone": true,
+      "isTablet": true,
+    }
+  },
+  "case_study": [{
+    "type": "main_heading",
+    "value": "THE IDEA"
+  }, {
+    "type": "sub_heading",
+    "value": "Project Setup"
+  }, {
+    "type": "text",
+    "value": "Lorem %render() and %componentDidMount() dummy %text of the %printing and typesetting %industry. Lorem Ipsum has been the industry's standard dummy text ever %since the 1500s, when an %unknown printer took a galley of type and scrambled it to make a type %specimeLorem %Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, %when an unknown printer took a galley of type and scrambled it to make a type specime"
+  }, {
+    "type": "sub_heading",
+    "value": "Project Setup"
+  }, {
+    "type": "text",
+    "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimeLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard d"
+  }, {
+    "type": "img",
+    "value": "https://movieblob.github.io/static/media/pocorns.55405e51.png"
+  }]
+}
