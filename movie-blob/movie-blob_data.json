@@ -1,7 +1,7 @@
 {
   "details": {
-    "mobile_pic":"https://raw.githubusercontent.com/dimitranov/portfoliodata/master/movie-blob/movie-blob_mobile.png",
-    "desktop_pic":"https://raw.githubusercontent.com/dimitranov/portfoliodata/master/movie-blob/movie-blob_desktop.png",
+    "mobile_pic": "https://raw.githubusercontent.com/dimitranov/portfoliodata/master/movie-blob/movie-blob_mobile.png",
+    "desktop_pic": "https://raw.githubusercontent.com/dimitranov/portfoliodata/master/movie-blob/movie-blob_desktop.png",
     "text": " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specime",
     "time": "  02 Jan 2018 - 12 Jan 2018 - 50h",
     "learned": " HTTP requests / Axios , Redux Basic App Structure , Functional Components",
