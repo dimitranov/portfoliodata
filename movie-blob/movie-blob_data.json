@@ -126,7 +126,31 @@
     },
     {
       "type": "text",
-      "value": "First, i %connect the %<Upcoming/> component with the %connect(mapStateToProps,mapDispatchToProps)(Upcoming) so I can use parts of the application state and call %redux-actions for updating the state. In  %mapStateToProps the component gets %data_Upcoming: %state.moviesReducer.data_Upcoming, and %data_Upcoming_TV: %state.tvReducer.data_Upcoming_TV, those parts of the state as props. On the initial Load, those props are empty so we need to a %PropType validation on them. Then in %mapDispatchToProps, I created 4 functions that call 4 %redux-actions functions for Pulling and Inserting data and function for loading more data of the specific type, both for movies and tv shows. I use %axios to make an HTTP request to the API, Axios is promise based async data fetcher so I get a promise as a response to that request. %.then( %response %=> ( in here we call %dispatch( and in here we call the %redux-action  that changes the state based on the %response.data value)   ) %), then the app re-renders and the data is displayed. %<Movies/> component get there %data={this.props.data_Upcoming} or in case of TV %data_Upcoming_TV , then we render %data_Upcoming_TV.length number "
+      "value": "First, i %connect the %<Upcoming/> component with the %connect(mapStateToProps,mapDispatchToProps)(Upcoming) so I can use parts of the application state and call %redux-actions for updating the state. In  %mapStateToProps the component gets %data_Upcoming: %state.moviesReducer.data_Upcoming, and %data_Upcoming_TV: %state.tvReducer.data_Upcoming_TV, those parts of the state as props. On the initial Load, those props are empty so we need to a %PropType validation on them. Then in %mapDispatchToProps, I created 4 functions that call 4 %redux-actions functions for Pulling and Inserting data and function for loading more data of the specific type, both for movies and tv shows. The primal usage of the data_fetching function  is in the component %componentWillMount or the %constructor() functions. I use %axios to make an HTTP request to the API, Axios is promise based async data fetcher so I get a promise as a response to that request. %.then( %response %=> ( in here we call %dispatch( and in here we call the %redux-action  that changes the state based on the %response.data value)   ) %), then the app re-renders and the data is displayed. %<Movies/> component get there %data={this.props.data_Upcoming} or in case of TV %data_Upcoming_TV , then we render %data_Upcoming_TV.length number of <Unit/> components and each gets the %movie.id property that we will use later on to fetch data for a specific movie."
+    },
+    {
+      "type": "text",
+      "value": "I won't dive deeper in explaining how I use the API because the possibilities are endless, but most of the components that render a set of <Unit/> components via the <Movies/> us the same pattern as above. %connect => %execute %props.fetchData() in %componentWillMount() => %dispatch(stateChange(data.from_fetch)) => state update => view-re-render."
+    },
+    {
+      "type": "text",
+      "value": "Here are some example URLs for fetching data. %https://api.themoviedb.org/3/movie/upcoming?api_key=<<KEY>>&language=en-US&page=1 get page 1 of upcoming movies , %https://api.themoviedb.org/3/discover/movie?api_key=<<KEY>>&language=en-US&sort_by=popularity.desc&year=2018&with_genres=10067&page=1 get all action(genre id) movies from 2017 and sort then by popularity "
+    },
+    {
+      "type": "text",
+      "value": "Now let's talk about, The single <Move/> of <TvShow/> components that display a page with info like details, youtube trailer, similar movies and more, at %/movie/movieID or %/tv/tvID route. "
+    },
+    {
+      "type": "text",
+      "value": "The redux patter is the same as before, but this time, instead of 1 request we do 3 requests. One for movie data, one for youtube trailer and one for similar movies. All are props of the component itself and are executed on the %componentWillMount() lifecycle method of the component."
+    },
+    {
+      "type": "text",
+      "value": "Lets take for example the URL we use for fetching a movie information %axios.get('https://api.themoviedb.org/3/movie/(movieID)?api_key=<<KEY>>&language=en-US').then(...) here we see that  we need an exact movieID so we can fetch data for the movie. Now how do we get this movieID , remember that the %<Unit/> component get a set of movie details, one of them is the %movie_id property. If you remember the Router section I mentioned that every %<Movie/> component is rendered on the %/movie/:movieId route which gives us the %this.props.match.params.movieId value of the URL that we navigate to. Now, remember that the %<Unit/> component I wrapped in a %<Link/> component, this means that the %<Link/> has access to the %movie_id property so we can use it there. "
+    },
+    {
+      "type": "text",
+      "value": "So a summary of the activities that happen for displaying a single <Movie/> component has to look like this: %1. The %<Unit/> component has the %movie_id or %tvshow_id prop that is used in the Link component as that - %<Link %to={`/movie(or tv)/${props.data.id}`}> that relocates us to the %/movie/movieId route , the Movie component renders and  gets %this.props.match.params.movieId that for example is 430255 that in the %componentWillMount we execute the function that uses axios then dispatches an action and updates the state with the movie with id 430255 data."
     }
   ]
 }
