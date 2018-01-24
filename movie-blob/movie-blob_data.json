@@ -83,6 +83,22 @@
     {
       "type": "text",
       "value": "I creating the Redux store as a variable in the %index.js file and passed it as a property of the Provider Component who wraps all the other components and letting them access to the state of the application. The state is created from multiple reducers via the %combineReducers method we import from redux.\nThere are 4  reducers in  this application  one for  handling all the move actions like filtering, injecting the data from the CRUD API in the application  state and filtering, another with the same functions for the tv show data , one for the move sliders  and one user reducer for handling and using user data like personal lists and login data."
+    },
+    {
+      "type": "text",
+      "value": "From this point on all, we needed to do is use %connect to connect the state we pass from the PRovider component as a property of the component we work on, with %mapStateToProps and also create actions which we will execute from the component and link them to it with %mapDispatchToProps and pretty much this was it. Redux allowed us to have full control for the total state of the application and change it in an immutable fashion from any component that we like."
+    },
+    {
+      "type": "sub_heading",
+      "value": "Adding Router"
+    },
+    {
+      "type": "text",
+      "value": "React Router is very simple to implement, but in this application, we wanted to have 3 types of Routes. A normal %<Route/> accessible to all users no matter logged or not, A special %<PrivateRouter/> which if entered and the %state.authed property is %false resolves in a %<Redirect/> and a third type called %<LoginRoute/> with the opposite logic of the <PrivateRoute/> ... il explain the use of those routes in a second."
+    },
+    {
+      "type": "text",
+      "value": "Let's talk about the router structure of the application. First, we have a %/ route which renders the %Home Component, after then we have %/discover ,  %/toprated , %/upcoming basic routes each rendering their page component. Then we have %/movie/:movieId route and /tv/:tv=Id those are routes with parameters , rendering a %<Movie/> or %<TvShow/> component. Later on, i will explain why and what is this parameter. Then we have the two special routes, the First one %<LoginRoute/> is used for rendering both %<Login/> and %<Registration/> components, The routes function like this: %this.state.authed value, this value is a %boolean ( if its %true the user is logged in already, if %false it's not),  on entering this route first  thing that we do is check this value of the state if its %false meaning that  we dont have a crrentlyLogged user we can render the registration  of  login component and user can log in to creating an  accout, but its the value is %true  on the other hand we have an awready loged user that we %<Redirect/> to the %/ route and render the <Home/> component. The other Custom route is the <PrivateRoute/> this route renders the user personal list of Movies and TV shows, again the login is the same but reversed if a user is logged - display the %/mylist router if no <Redirect/> to the %/ route."
     }
   ]
 }
