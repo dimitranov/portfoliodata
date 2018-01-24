@@ -2,7 +2,7 @@
   "details": {
     "url_link": "https://movieblob.github.io/",
     "title": "Movie Blob",
-    "text": "Find movies and tv shows, Serch by year, name, genre and more. Explore the top rated and upcoming. Save movies and tv shows you like I a personal list so you don't forget them. ",
+    "text": " Find movies and tv shows, Serch by year, name, genre and more. Explore the top rated and upcoming. Save movies and tv shows you like I a personal list so you don't forget them. ",
     "time": "  02 Jan 2018 - 12 Jan 2018 - 50h",
     "learned": " HTTP requests / Axios , Redux Basic App Structure , Functional Components",
     "practiced": " Firebase Authentication, User Base Data, CSS3 - Animations, jQuery UX , Redux Composition, React Functional Components, HTTP requests",
@@ -150,7 +150,43 @@
     },
     {
       "type": "text",
-      "value": "So a summary of the activities that happen for displaying a single <Movie/> component has to look like this: %1. The %<Unit/> component has the %movie_id or %tvshow_id prop that is used in the Link component as that - %<Link %to={`/movie(or tv)/${props.data.id}`}> that relocates us to the %/movie/movieId route , the Movie component renders and  gets %this.props.match.params.movieId that for example is 430255 that in the %componentWillMount we execute the function that uses axios then dispatches an action and updates the state with the movie with id 430255 data."
+      "value": "So a summary of the activities that happen for displaying a single <Movie/> component has to look like this: The %<Unit/> component has the %movie_id or %tvshow_id prop that is used in the Link component as that - %<Link %to={`/movie(or %tv)/${props.data.id}`}> that relocates us to the %/movie/movieId route , the Movie component renders and  gets %this.props.match.params.movieId that for example is 430255 that in the %componentWillMount we execute the function that uses axios then dispatches an action and updates the state with the movie with id 430255 data."
+    },
+    {
+      "type": "sub_heading",
+      "value": "The User SYstem"
+    },
+    {
+      "type": "text",
+      "value": "Creating the user base system was fairly easy with the tools Google Firebase provides us. The main reason for having a User Base System is for the user to have his own personal Lists of Prefered Movies and Tv Shows. I explain to you how this is achieved."
+    },
+    {
+      "type": "text",
+      "value": "First, in the single Movie component, we create a method that based on the this.state.authed we render either a Message to Login If you want to save this movie/tv show or another button that either Saves the movie /tv show on the Personal List of removes it. "
+    },
+    {
+      "type": "text",
+      "value": "First, lets talk about %addMovieToList() the function that adds a new movie to the user database. But how does it happens? the steps this function takes are as follows: First, we find the currently logged user, this is achieved via the firebase %firebaseAuth().currentUser object, this object contains data fro the user, we are interested in the %this.user.uid value. Second: now since firebase  data can't cant be directly mutated it has to  be mutated in an immutable fashion like redux-store, so we achieve this by doing so: 1. we create an  empty array called tempData , we check if the data we get from the firebase async HTTP request exist meaning there are some movies already there and respectively in the state of the app  we make the template to equal this state, now tempData is out personal array of objects(movies/tv shows) . Then  when  we decide to add a new movie to this  array  we call %.push() on it, after that we  need to call update on the reference of the firebase database and update the current array there with  the new  temporary that we created %ref.child(`users/${this.user.uid}/info`).update({myMovieList:tempData})... and that's it, we just  inserted a new movie in  our database."
+    },
+    {
+      "type": "text",
+      "value": "For removing a movie from our database personal list first we do the same as above, we create a new array that is empty, we make it equal the %this.state.myMovieList then we loop  through it and find if the id property of the movie matches some of the id of the array units we get his index and use the %.splice(1, %index) function to remove it, then we update the firebase array whit our temp array, and the movie is gone."
+    },
+    {
+      "type": "sub_heading",
+      "value": "Unsolved problem"
+    },
+    {
+      "type": "text",
+      "value": "The problem that I didn't manage to solve is this: When we navigate from a normal, route to say for instance %/toprated to let's say a %/movie/345526 route and then to another %/movie/644324 and we click the back button to navigate to 345526 we get the same page 644324. I think this is caused by the Unit - %<Link/> component .. somehow it pushes  2 routes of the same value in the router history."
+    },
+    {
+      "type": "main_heading",
+      "value": "CONCLUSION"
+    },
+    {
+      "type": "text",
+      "value": "At the end of the project, I felt good, I managed to practice all skills I learned before and use and learn a new skill that will be very useful to me in a future project. Axios and redux allow me  to build more complex and big web applications "
     }
   ]
 }
