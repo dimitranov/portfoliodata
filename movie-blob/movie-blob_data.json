@@ -99,6 +99,26 @@
     {
       "type": "text",
       "value": "Let's talk about the router structure of the application. First, we have a %/ route which renders the %Home Component, after then we have %/discover ,  %/toprated , %/upcoming basic routes each rendering their page component. Then we have %/movie/:movieId route and /tv/:tv=Id those are routes with parameters , rendering a %<Movie/> or %<TvShow/> component. Later on, i will explain why and what is this parameter. Then we have the two special routes, the First one %<LoginRoute/> is used for rendering both %<Login/> and %<Registration/> components, The routes function like this: %this.state.authed value, this value is a %boolean ( if its %true the user is logged in already, if %false it's not),  on entering this route first  thing that we do is check this value of the state if its %false meaning that  we dont have a crrentlyLogged user we can render the registration  of  login component and user can log in to creating an  accout, but its the value is %true  on the other hand we have an awready loged user that we %<Redirect/> to the %/ route and render the <Home/> component. The other Custom route is the <PrivateRoute/> this route renders the user personal list of Movies and TV shows, again the login is the same but reversed if a user is logged - display the %/mylist router if no <Redirect/> to the %/ route."
+    },
+    {
+      "type": "sub_heading",
+      "value": "The API"
+    },
+    {
+      "type": "text",
+      "value": "%www.themoviedb.org provide an amazing API for fetching move, tv show, actor, and almost everything related to the movie industry data. Now let's talk about, how I use the API for the application purposes."
+    },
+    {
+      "type": "text",
+      "value": "In the application I use 2 types of data fetching, let's call them %'multiple' and %'single' for fetching data for multiple movies and for a single movie. I will start with the %'multiple' fetching. As I researched the  API documentation and performed a few test of the API in  the Chrome Console I found out that no matter what  type of %'multiple' fetch I do, I get an Array of 20 objects , each object is a movie that contains %key: value pairs like name, realease_date, poster_path and more. The array I got was based on the structure of the URL I fetch the data from. "
+    },
+    {
+      "type": "text",
+      "value": "Then when I got a good understanding of the data that I get from the API call I needed to display this data on the %VIew somehow. So I Created a %<Movies/> component and a %<Unit/> component. When the %<Movies/> is rendered somewhere it needs a %data property of %PropType.Array which is the array of object gained from the API call.  "
+    },
+    {
+      "type": "text",
+      "value": "Then when I got a good understanding of the data that I get from the API call I needed to display this data on the %VIew somehow. So I Created a %<Movies/> component and a %<Unit/> component. When the %<Movies/> is rendered somewhere it needs a %data property of %PropType.Array which is the array of object gained from the API call.  Then via the %ES6 method %Array.prototype.map() for each Object in that array I render a %<Unit/> component that is the single movie in a movie list. This component is basically a %<Link/> that wraps some data like the poster-path, name, and rate. So the %<Unit/> component needs 2 properties a %data prop of type Object that passes those %poster_path, %name  (e.t.) to the View and a  %isTV prop that I a boolean and tells is it a <Link/> to a TV Component / Route of a MOVIE one."
     }
   ]
 }
