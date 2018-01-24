@@ -119,6 +119,14 @@
     {
       "type": "text",
       "value": "Then when I got a good understanding of the data that I get from the API call I needed to display this data on the %VIew somehow. So I Created a %<Movies/> component and a %<Unit/> component. When the %<Movies/> is rendered somewhere it needs a %data property of %PropType.Array which is the array of object gained from the API call.  Then via the %ES6 method %Array.prototype.map() for each Object in that array I render a %<Unit/> component that is the single movie in a movie list. This component is basically a %<Link/> that wraps some data like the poster-path, name, and rate. So the %<Unit/> component needs 2 properties a %data prop of type Object that passes those %poster_path, %name  (e.t.) to the View and a  %isTV prop that I a boolean and tells is it a <Link/> to a TV Component / Route of a MOVIE one."
+    },
+    {
+      "type": "text",
+      "value": "Let me explain to you the first and simplest usage of this API. For that, I will tell you how the %/upcoming Component/Routes work ( same applies to %/toprated )."
+    },
+    {
+      "type": "text",
+      "value": "First, i %connect the %<Upcoming/> component with the %connect(mapStateToProps,mapDispatchToProps)(Upcoming) so I can use parts of the application state and call %redux-actions for updating the state. In  %mapStateToProps the component gets %data_Upcoming: %state.moviesReducer.data_Upcoming, and %data_Upcoming_TV: %state.tvReducer.data_Upcoming_TV, those parts of the state as props. On the initial Load, those props are empty so we need to a %PropType validation on them. Then in %mapDispatchToProps, I created 4 functions that call 4 %redux-actions functions for Pulling and Inserting data and function for loading more data of the specific type, both for movies and tv shows. I use %axios to make an HTTP request to the API, Axios is promise based async data fetcher so I get a promise as a response to that request. %.then( %response %=> ( in here we call %dispatch( and in here we call the %redux-action  that changes the state based on the %response.data value)   ) %), then the app re-renders and the data is displayed. %<Movies/> component get there %data={this.props.data_Upcoming} or in case of TV %data_Upcoming_TV , then we render %data_Upcoming_TV.length number "
     }
   ]
 }
