@@ -29,16 +29,16 @@
       "value": "IDEA & PURPOSE"
     },
     {
-      "type":"sub_heading",
-      "value":"Idea"
+      "type": "sub_heading",
+      "value": "Idea"
     },
     {
       "type": "text",
       "value": "The main idea behind the project is creating a web application for searching and finding a new movie or TV show by the user for reading information, adding in a personal list or watching online. "
     },
     {
-      "type":"sub_heading",
-      "value":"Purpose"
+      "type": "sub_heading",
+      "value": "Purpose"
     },
     {
       "type": "text",
@@ -63,6 +63,6 @@
     {
       "type": "text",
       "value": "First, of all building, a ReactJs application starts with one command executed in the project directory. And I'm talking about %create-react-app this created a simple but very functional environment for developing a ReactJs application, both simple and complex. Then I started adding different packages using %nodejs %npm, the packages I added can be found in the %package.json file of the directory I linked in the details of the project above. Some among them are %firebase , %redux  and %react-router ."
-    },
+    }
   ]
 }
