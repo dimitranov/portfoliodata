@@ -25,27 +25,119 @@
   "case_study": [
     {
       "type": "main_heading",
-      "value": "THE IDEA"
+      "value": "IDEA & PURPOSE"
     },
     {
       "type": "sub_heading",
-      "value": "Project Setup"
+      "value": "Idea"
     },
     {
       "type": "text",
-      "value": "Lorem %render() and %componentDidMount() dummy %text of the %printing and typesetting %industry. Lorem Ipsum has been the industry's standard dummy text ever %since the 1500s, when an %unknown printer took a galley of type and scrambled it to make a type %specimeLorem %Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, %when an unknown printer took a galley of type and scrambled it to make a type specime"
+      "value": "I may say I am somehow obsessed with saving of resources, same applies to saving money from all possible expenses. Every driver knows that the car he uses is a big expense to him, so I decided to create an application for car expense management. because I needed one suited for my needs."
     },
     {
       "type": "sub_heading",
-      "value": "Project Setup"
+      "value": "Purpose"
     },
     {
       "type": "text",
-      "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimeLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard d"
+      "value": "Using this application you can calculate the money that will cost you a trip from point A to point B, the distance you can pass fueling your car with a certain amount of fuel, also the fuel consumption of your car based on your indicator. The most important feature of this app is that you can save every calculation you make and look at the long-term results of your car usage."
     },
     {
-      "type": "img",
-      "value": "https://movieblob.github.io/static/media/pocorns.55405e51.png"
+      "type": "main_heading",
+      "value": "THE REASERCH"
+    },
+    {
+      "type": "text",
+      "value": "After establishing the application I wanted to create, it was time to start some research in the car industry and economy field. First I researched the base formula for calculation the fuel consumption of a car. based on it I pulled out the other two main formulas that will be used in the other two calculators, the formula for distance based on the fueling quantity, the price of the fuel and the fuel consumption of your car, and the formula for a price of a trip which is based on distance, fueling consumption and fuel price."
+    },
+    {
+      "type": "main_heading",
+      "value": "THE DEVELOPING PROCESS"
+    },
+    {
+      "type": "sub_heading",
+      "value": "Setup"
+    },
+    {
+      "type": "text",
+      "value": "In this Setup section, i  will be telling you about how was the project setup, the steps I took, the actions I did and more."
+    },
+    {
+      "type": "text",
+      "value": "Now I would be explaining in details how I did the project  and structured the code but I will walk you  through all steps and explain why I did them and how the project benefited."
+    },
+    {
+      "type": "text",
+      "value": "After creating the wireframes and user application use steps I proceed in creating the code-base itself."
+    },
+    {
+      "type": "text",
+      "value": "First, of all building, a ReactJs application starts with one command executed in the project directory. And I'm talking about %create-react-app this created a simple but very functional environment for developing a ReactJs application, both simple and complex. Then I started adding different packages using %nodejs %npm, the packages I added can be found in the %package.json file of the directory I linked in the details of the project above. Some among them are %firebase , Google's %material-ui and %react-router."
+    },
+    {
+      "type": "text",
+      "value": "Now after creating the application and adding the packages I needed it was time to start the fun part ... CODE. "
+    },
+    {
+      "type": "sub_heading",
+      "value": "React Router"
+    },
+    {
+      "type": "text",
+      "value": "Since our application will be user base, meaning that you  will need an  account for using it, we will need two type of routers, one will be %<PrivateRoute/> the other one will be <PublicRouter/>"
+    },
+    {
+      "type": "text",
+      "value": "The whole application has four routes, a %/ which renders the %<Home/> component, a%/login - %<Login/>  , %/register - %<Registraion/> and a %/dashboard route that renders the %<Dashboard/> component that contains the calculators and the data page."
+    },
+    {
+      "type": "text",
+      "value": "Now in the application state, we have a %this.state.authed value which is a boolean value giving us information on IS the user logged in or is he NOT. ( true / false ). The %<PublicRoute/> is for displaying the %<Login/> , %<Registration/> and %<Home/> components, those routes are accessible if the user is logged - %this.state.auther %=== %false. The other %<PrivateRoute/> is for rendering the %<Dashboard/> component and its only  accesigle if %this.state.authed %=== %true."
+    },
+    {
+      "type": "sub_heading",
+      "value": "Calculators and Material UI"
+    },
+    {
+      "type": "text",
+      "value": "Adding material  UI was easy, after a scope through the documentation and the component function that material UI provides me, I was ready to start building the calculators. "
+    },
+    {
+      "type": "text",
+      "value": "There ate 4 section in the %<Dashboard/> component, I decided to user Material UI Tabs Component for navigation between the sub-pages. Calculator pages are simple, I  won't dive deep into explaining how they work. Basically mix of text fields, radio buttons, buttons and an empty paragraph for displaying the calculation results."
+    },
+    {
+      "type": "text",
+      "value": "Before I go to the Data page I have to explain the user base that we use for creating and displaying the information."
+    },
+    {
+      "type": "sub_heading",
+      "value": "Firebase User Base"
+    },
+    {
+      "type": "text",
+      "value": "Firebase provides us a fast and simple API  for creating and managing users. Also, we have the current user object which is mostly useful for us reachable with %this.user  %= %firebaseAuth().currentUser; "
+    },
+    {
+      "type": "text",
+      "value": "Now let's go back to the %<Data/> page. On this page we have 3 possibilities, to save the money we spend while fueling our car, the distance we've passed through the day, and the fuel consumption that we got as a result from the calculation."
+    },
+    {
+      "type": "text",
+      "value": "When we create a firebase user ( the user creates an account ) we create 3 arrays of integers in his personal user data. An array for gathering distance data, an array for price data and an array for fuel consumption data. "
+    },
+    {
+      "type": "text",
+      "value": "When we log in the app an async request to the database reference is made, the data is pulled and inserted in the state of the application. Later on, if we add new value to some of the arrays the state is updated, respectively the firebase state is updated too. Then when we navigate to the %<Data/> page we make a good use of ChartsJS for displaying the data in a line graph view."
+    },
+    {
+      "type": "main_heading",
+      "value": "CONCLUSION"
+    },
+    {
+      "type": "text",
+      "value": "The app is very useful in my opinion, easy to use and simple. After all, its not a finance application in which you can manage your car in many different ways but it serves its main purpose. In my opinion, the only disadvantage is that it's a web application and such idea I best functions as a mobile app. But this is just an idea for the future."
     }
   ]
 }
