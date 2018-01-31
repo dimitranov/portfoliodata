@@ -1,6 +1,7 @@
 {
   "details": {
     "url_link": "https://movieblob.github.io/",
+    "url_link_code": "https://github.com/dimitranov/myprojects/tree/master/Movie_Blob_React/src",
     "title": "Movie Blob",
     "text": " Find movies and tv shows, Serch by year, name, genre and more. Explore the top rated and upcoming. Save movies and tv shows you like I a personal list so you don't forget them. ",
     "time": "  02 Jan 2018 - 12 Jan 2018 - 50h",
@@ -154,7 +155,7 @@
     },
     {
       "type": "sub_heading",
-      "value": "The User System"
+      "value": "The User SYstem"
     },
     {
       "type": "text",
